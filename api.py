@@ -147,8 +147,6 @@ def riskreview():
 		countypop = i.get('population')
 
 
-	countycases = 2000
-	countypop = 4000
 	if ((countycases / countypop) > .3):
 		return "Our records show you have recently traveled to a corona virus hotspot"
 	
