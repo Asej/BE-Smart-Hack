@@ -143,13 +143,15 @@ def riskreview():
 		if i['County'] in county:
 			countycases = i.get('PositiveCases')
 
-	for i in county_population[county]:
-		countypop = i.get('population')
+	for i in county:
+		countypop = county_population[i].get('population')
 
-
+	countycases = 2
+	countypop = 4
 	if ((countycases / countypop) > .3):
 		return "Our records show you have recently traveled to a corona virus hotspot"
-	
+	else:
+		return None
 
 
 if __name__ == '__main__':
