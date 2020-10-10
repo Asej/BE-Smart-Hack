@@ -1,5 +1,10 @@
 BE Smart Hackathon - J'Abari Tribe
 
+Wendy Rivera
+Deben Peterson
+Anthony Edwards
+
+
 CANARY- It worries so, you dont have to!
 
 Covid Alert Notifiaction Analyzing Risk for You
