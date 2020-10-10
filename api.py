@@ -132,9 +132,26 @@ def cdcdata():
 
 @app.route('/api/vi/resources/tripreview/risk', methods=['GET'])
 def riskreview():
+	state = arrival_bp['to_location']['state']
+	city = arrival_bp['to_location']['city']
+	county = countyfinder(city)
 
+	countycases = 0
+	countypop = 0
+
+	for i in CDCapi['statedata']:
+		if i['County'] in county:
+			countycases = i.get('PositiveCases')
+
+	for i in county_population[county]:
+		countypop = i.get('population')
+
+
+	countycases = 2000
+	countypop = 4000
+	if ((countycases / countypop) > .3):
+		return "Our records show you have recently traveled to a corona virus hotspot"
 	
-
 
 
 if __name__ == '__main__':
